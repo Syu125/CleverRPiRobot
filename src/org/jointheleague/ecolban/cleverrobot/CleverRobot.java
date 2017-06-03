@@ -12,7 +12,7 @@ import org.jointheleague.ecolban.rpirobot.SimpleIRobot;
 
 public class CleverRobot extends IRobotAdapter {
 	Sonar sonar = new Sonar();
-	
+
 	public CleverRobot(IRobotInterface iRobot) {
 		super(iRobot);
 	}
@@ -22,38 +22,40 @@ public class CleverRobot extends IRobotAdapter {
 		IRobotInterface base = new SimpleIRobot();
 		CleverRobot rob = new CleverRobot(base);
 		rob.setup();
-		while(rob.loop()){}
+		while (rob.loop()) {
+		}
 		rob.shutDown();
-		
+
 	}
 
 	private void setup() throws Exception {
-		driveDirect(200,200);
+		driveDirect(200, 200);
 	}
-	
-	private boolean loop() throws Exception{
+
+	private boolean loop() throws Exception {
 		isBumpLeft();
-			isBumpRight();
+		isBumpRight();
 		readSensors(100);
 		isLightBump();
-			
-			if(isLightBump()){
-					driveDirect(-100,-100);
-					Thread.sleep(1000);
-					driveDirect(0,100);
-					Thread.sleep(1300);
-					driveDirect(200,200);
-				}
-			if(isBumpLeft()){
-				driveDirect(0,100);
-				Thread.sleep(1000);
-				driveDirect(200,200);
-			}
-			if(isBumpRight()){
-				driveDirect(100,0);
-				Thread.sleep(1000);
-				driveDirect(200,200);
-			}
+
+		if (isLightBump()) {
+			driveDirect(50, 50);
+
+		}
+		if (isBumpLeft()) {
+			driveDirect(-100, -100);
+			Thread.sleep(1000);
+			driveDirect(0, 100);
+			Thread.sleep(1000);
+			driveDirect(200, 200);
+		}
+		if (isBumpRight()) {
+			driveDirect(-100, -100);
+			Thread.sleep(1000);
+			driveDirect(100, 0);
+			Thread.sleep(1000);
+			driveDirect(200, 200);
+		}
 		return true;
 	}
 
