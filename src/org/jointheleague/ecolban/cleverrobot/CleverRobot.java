@@ -44,15 +44,15 @@ public class CleverRobot extends IRobotAdapter {
 		}
 		if (isBumpLeft()) {
 			driveDirect(-100, -100);
-			Thread.sleep(1000);
-			driveDirect(0, 100);
+			Thread.sleep(2000);
+			driveDirect(0, 500);
 			Thread.sleep(1000);
 			driveDirect(200, 200);
 		}
 		if (isBumpRight()) {
 			driveDirect(-100, -100);
-			Thread.sleep(1000);
-			driveDirect(100, 0);
+			Thread.sleep(2000);
+			driveDirect(500, 0);
 			Thread.sleep(1000);
 			driveDirect(200, 200);
 		}
