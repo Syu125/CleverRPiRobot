@@ -13,6 +13,10 @@
 	<classpathentry kind="lib" path="lib/pi4j-device.jar"/>
 	<classpathentry kind="lib" path="lib/pi4j-gpio-extension.jar"/>
 	<classpathentry kind="lib" path="lib/pi4j-service.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="lib/jrpicam-1.1.1.jar"/>
+=======
+	<classpathentry kind="lib" path="jrpicam-1.1.1.jar"/>
+>>>>>>> jointheleague/master
 	<classpathentry kind="output" path="bin"/>
 </classpath>
